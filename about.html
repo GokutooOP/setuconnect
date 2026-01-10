@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About | Setu Connect – Who We Are</title>
+  <meta name="description" content="Learn about Setu Connect, our philosophy, vision, and how we execute with clarity and accountability.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="site-show">
+
+<!-- ===== Header ===== -->
+<header class="header" id="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo-link">
+      <img src="images/setuconnect-logo.png" alt="Setu Connect Logo" class="logo">
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li class="nav-cta">
+        <a href="index.html#contact" class="nav-button">Get Started</a>
+      </li>
+    </ul>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+</header>
+
+<!-- ===== About Hero ===== -->
+<section class="hero about-hero">
+  <div class="container hero-content">
+    <h1>Built for Execution</h1>
+    <p class="tagline">
+      Setu Connect exists to bring structure, clarity, and ownership
+      to the way businesses execute.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Story ===== -->
+<section class="about-section container">
+  <div class="about-card">
+    <h2>Why Setu Connect Exists</h2>
+    <p>
+      Setu Connect was created to address a recurring issue across startups
+      and growing businesses — strong ideas failing due to fragmented
+      and inconsistent execution.
+    </p>
+    <p>
+      Founders are often forced to coordinate multiple vendors and advisors
+      while trying to focus on building their core business.
+      We exist to simplify that complexity.
+    </p>
+  </div>
+</section>
+
+<!-- ===== Philosophy ===== -->
+<section class="about-section container">
+  <div class="about-card highlight">
+    <h2>Our Philosophy</h2>
+    <p>
+      Execution is not about speed alone — it is about clarity,
+      ownership, and consistency.
+    </p>
+    <p>
+      We treat execution as a system, not a series of tasks.
+      Every engagement is approached with defined goals,
+      clear responsibility, and measurable outcomes.
+    </p>
+  </div>
+</section>
+
+<!-- ===== How We Think ===== -->
+<section class="about-section container">
+  <div class="about-grid">
+    <div class="about-mini">
+      <h3>Clarity</h3>
+      <p>Clear goals, clear plans, and clear priorities.</p>
+    </div>
+    <div class="about-mini">
+      <h3>Ownership</h3>
+      <p>Execution with responsibility, not handoffs.</p>
+    </div>
+    <div class="about-mini">
+      <h3>Repeatability</h3>
+      <p>Processes designed to scale with the business.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Values ===== -->
+<section class="about-section container">
+  <div class="about-card">
+    <h2>What We Stand For</h2>
+    <ul class="why-list">
+      <li><strong>Accountability:</strong> We take ownership of outcomes</li>
+      <li><strong>Simplicity:</strong> Reduce complexity wherever possible</li>
+      <li><strong>Reliability:</strong> Consistent execution you can trust</li>
+      <li><strong>Partnership:</strong> Long-term thinking over short-term wins</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Vision ===== -->
+<section class="about-section container">
+  <div class="about-card">
+    <h2>Our Vision</h2>
+    <p>
+      Our vision is to become the execution infrastructure layer
+      for emerging businesses — enabling founders to build,
+      scale, and operate with confidence.
+    </p>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="contact-section">
+  <div class="container">
+    <h2>Let’s Execute with Confidence</h2>
+    <p class="contact-sub">
+      If you value structure, clarity, and accountability —
+      we’d love to work with you.
+    </p>
+    <a href="index.html#contact" class="cta-button">
+      Start the Conversation
+    </a>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container footer-content">
+    <p>Setu Connect — Bridging Vision and Execution</p>
+    <p>© <span id="year"></span> All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("menu-toggle").onclick = () =>
+    document.getElementById("nav-links").classList.toggle("active");
+</script>
+
+</body>
+</html>
