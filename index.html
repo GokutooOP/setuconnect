@@ -7,6 +7,7 @@
   <title>Setu Connect | Business Execution Partner</title>
   <meta name="description" content="Setu Connect is a business execution partner helping startups and growing businesses with tech, marketing, operations, and compliance.">
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -20,19 +21,21 @@
 <div id="intro">
   <div class="intro-wrapper">
     <div class="intro-line"></div>
+    <h1 class="intro-logo">Setu Connect</h1>
+    <p class="intro-text">Bridging vision and execution</p>
   </div>
 </div>
 
 <!-- ===== Header ===== -->
 <header class="header" id="site-header">
   <nav class="nav container">
-    <a href="index.html" class="logo-link">
+    <a href="/" class="logo-link">
       <img src="images/setuconnect-logo.png" alt="Setu Connect Logo" class="logo">
     </a>
 
     <ul class="nav-links" id="nav-links">
       <li><a href="#hero">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="process.html">Process</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -46,7 +49,7 @@
 </header>
 
 <!-- ===== Hero ===== -->
-<section id="hero" class="hero">
+<section class="hero">
   <div class="container hero-content">
     <h1>
       Bridging Vision <br />
@@ -62,12 +65,6 @@
       <a href="#contact" class="cta-button">Book Free Consultation</a>
       <a href="#process" class="secondary-link">How We Work</a>
     </div>
-
-    <div class="hero-trust">
-      <span>Execution-first</span>
-      <span>Founder-focused</span>
-      <span>Accountability-driven</span>
-    </div>
   </div>
 </section>
 
@@ -76,6 +73,7 @@
   <h2>Your Execution Partner</h2>
   <p><strong>Setu Connect</strong> helps startups and growing businesses turn ideas into reality.</p>
   <p>We bridge the gap between planning and action so you can focus on growth.</p>
+  <p><strong>We don’t just advise — we execute.</strong></p>
 
   <div class="gap-visual">
     <div>Vision</div>
@@ -125,8 +123,19 @@
   </div>
 </section>
 
+<!-- ===== Why Choose ===== -->
+<section class="container">
+  <h2>Why Choose Setu Connect?</h2>
+  <ul class="why-list">
+    <li>Execution-first approach</li>
+    <li>Single partner for multiple needs</li>
+    <li>Clear accountability</li>
+    <li>Built for startups & scale-ups</li>
+  </ul>
+</section>
+
 <!-- ===== Process ===== -->
-<section id="process" class="gap-section container process">
+<section id="process" class="container process">
   <h2>How We Work</h2>
   <ol class="process-list">
     <li>Understand your business</li>
@@ -137,23 +146,17 @@
 </section>
 
 <!-- ===== Contact ===== -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <h2>Let’s Execute with Confidence</h2>
-
-    <form
-      action="https://usebasin.com/f/f8a6effa88b6"
-      method="POST"
-      class="contact-form"
-    >
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell us about your project" required></textarea>
-      <input type="hidden" name="_subject" value="New Free Consultation Request – Setu Connect">
-      <button type="submit" class="cta-button">Book Free Consultation</button>
-    </form>
-  </div>
-</section>
+<form
+  action="https://usebasin.com/f/f8a6effa88b6"
+  method="POST"
+  class="contact-form"
+>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Tell us about your project" required></textarea>
+  <input type="hidden" name="_subject" value="New Free Consultation Request – Setu Connect">
+  <button type="submit" class="cta-button">Book Free Consultation</button>
+</form>
 
 <!-- ===== Footer ===== -->
 <footer class="footer">
@@ -163,16 +166,7 @@
 </footer>
 
 <script>
-  const header = document.getElementById("site-header");
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  menuToggle.onclick = () => {
-    navLinks.classList.toggle("active");
-    header.classList.remove("hide");
-  };
 
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -181,27 +175,31 @@
     }, 2200);
   });
 
-  let lastScrollY = window.scrollY;
-  window.addEventListener("scroll", () => {
-    const current = window.scrollY;
-    if (current > lastScrollY && current > 120) header.classList.add("hide");
-    else header.classList.remove("hide");
-    lastScrollY = current;
-  });
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  menuToggle.onclick = () => {
+    navLinks.classList.toggle("active");
+  };
 
   const slides = document.querySelector(".slides");
   const slideItems = document.querySelectorAll(".slide");
   let index = 0;
 
-  document.getElementById("next").onclick = () => {
-    index = (index + 1) % slideItems.length;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  };
-
-  document.getElementById("prev").onclick = () => {
-    index = (index - 1 + slideItems.length) % slideItems.length;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  };
+  if (slides && slideItems.length) {
+    document.getElementById("next").onclick = () => {
+      index = (index + 1) % slideItems.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+    document.getElementById("prev").onclick = () => {
+      index = (index - 1 + slideItems.length) % slideItems.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    };
+    setInterval(() => {
+      index = (index + 1) % slideItems.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 5000);
+  }
 </script>
 
 </body>

@@ -444,3 +444,26 @@ body.site-show .header { opacity: 1; transform: translateY(0); }
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(56, 189, 248, 0.35);
 }
+.hero h1 span {
+  color: #38bdf8;
+}
+
+.hero-sub {
+  max-width: 720px;
+  margin: 24px auto 40px;
+  font-size: 1.15rem;
+  color: #cbd5f5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.secondary-link {
+  color: #e5e7eb;
+  text-decoration: underline;
+  font-weight: 500;
+}
